@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mini Demandas Remuneradas | Juliana Costa</title>
+    <meta name="description" content="Mini Demandas Remuneradas com Juliana Costa. Veja Como Ganhar Dinheiro com Mini Demandas se tornando parceiro (a) de grandes empresas passo a passo." />
+    <link rel="icon" type="image/png" href="images/google-logo.png">
+    <link rel="canonical" href="/" />
+
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    
+    <!-- Preload para a fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Todos os estilos necessários inline -->
+    <style>
+        /* Layout responsivo */
+        @media (min-width: 769px) {
+            .sessao01 {
+                background: url("images/background.png") top / cover no-repeat;
+                position: relative;
+                min-height: 100vh;
+                padding-top: 134px;
+                padding-bottom: 100px;
+            }
+            
+            .sessao01::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 150px;
+                background: linear-gradient(to bottom, transparent, #FBF4E4);
+                pointer-events: none;
+            }
+
+            .mobile-hero-image {
+                display: none !important;
+            }
+            
+            /* Cor do separador para desktop */
+            .separator, .site-seguro-container {
+                background-color: #FBF4E4;
+            }
+            
+            /* Tamanho dos badges de segurança em desktop */
+            .security-badges-container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            
+            .security-badge-img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sessao01 {
+                background: linear-gradient(to bottom, #f8eab9 85%, rgba(251, 244, 228, 0.5) 95%, #FBF4E4 100%);
+                padding-top: 0px;
+                min-height: 100vh;
+            }
+            .mobile-hero-image {
+                display: block;
+                margin-top: 1.25rem;
+                width: 100%;
+                text-align: center;
+            }
+            .partners-container {
+                margin: 15px;
+            }
+            
+            /* Cor do separador para mobile */
+            .separator, .site-seguro-container {
+                background-color: #f8eab9;
+            }
+            
+            /* Tamanho dos badges de segurança em mobile */
+            .security-badges-container {
+                gap: 10px;
+            }
+            
+            .security-badge-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .security-badge-text {
+                font-size: 11px;
+            }
+        }
+
+        /* Separador customizado */
+        .separator {
+            height: 40px;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .separator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, #f8eab9, #A67C52 10%, #D4C3A3 20%, #A67C52 30%, #D4C3A3 40%, #A67C52 50%, #D4C3A3 60%, #A67C52 70%, #D4C3A3 80%, #A67C52 90%, #f8eab9 100%);
+        }
+
+        .separator::after {
+            content: '$';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #A67C52;
+            opacity: 0.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .separator-coin {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #A67C52;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.2;
+        }
+
+        /* Estilos do carrossel de parceiros */
+        .partners-container {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 12px 20px 5px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .partners-title {
+            text-align: center;
+            color: #0CB0FF;
+            font-size: 14px;
+            font-weight: 300;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 0 1px 0;
+        }
+
+        .partners-title i {
+            color: #0CB0FF;
+            width: 20px;
+            height: 20px;
+        }
+
+        .logo-carousel {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 0;
+            margin-top: -10px;
+        }
+
+        .logo-slide {
+            display: inline-block;
+            animation: slide 20s linear infinite;
+        }
+
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .partner-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            margin: 0 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            object-fit: contain;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Pausar animação quando hover */
+        .logo-carousel:hover .logo-slide {
+            animation-play-state: paused;
+        }
+
+        /* Estilo para o ícone de verificação */
+        .verified-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Estilos para o badge do Google Partners */
+        .google-partners-badge {
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: -8px;
+            line-height: 0.5;
+        }
+
+        .google-badge {
+            max-width: 130px;
+            height: auto;
+            display: inline-block;
+            transform: scale(1);
+        }
+
+        /* Estilo para o container de site seguro */
+        .site-seguro-container {
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        .site-seguro-img {
+            background-color: #00000054;
+            padding: 10px;
+            border-radius: 10px;
+            height: auto;
+            width: auto;
+            display: inline-block;
+        }
+
+        /* Estilo para os badges de segurança */
+        .security-badges-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 5px;
+        }
+
+        .security-badge {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .security-badge-img {
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 769px) {
+            .security-badge-img {
+                height: 60px;
+                width: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .security-badges-container {
+                gap: 15px;
+            }
+            
+            .security-badge-img {
+                height: 50px;
+                width: auto;
+            }
+        }
+    </style>
+
+    <!-- Preload para o player de vídeo -->
+<link rel="preload" href="https://scripts.converteai.net/93013c20-512e-4b2b-84d6-a05a7b1fc8cf/players/67f842d2beefc545610faf7f/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://images.converteai.net/93013c20-512e-4b2b-84d6-a05a7b1fc8cf/players/67f842d2beefc545610faf7f/thumbnail.jpg" as="image">
+<link rel="preload" href="https://cdn.converteai.net/93013c20-512e-4b2b-84d6-a05a7b1fc8cf/67f84248efa8b48c4fafc464/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+    <!-- Preload para imagens principais -->
+    <link rel="preload" href="assets/img/background.webp" as="image">
+    <link rel="preload" href="assets/img/head1.webp" as="image">
+    <link rel="preload" href="assets/img/heromobile.webp" as="image">
+</head>
+
+<body class="m-0 p-0">
+
+    <article style="display: none;">
+
+        <h1>Mini Demandas Remuneradas: Ganhe em D&oacute;lar com o Google Sem Precisar Vender Nada</h1>
+
+        <img src="images/1.png" title="Mini Demanadas Remuneradas" alt="Mini Demanadas Remuneradas" height="300" width="400" />
+
+        <p>Voc&ecirc; j&aacute; ouviu falar sobre <strong>Mini Demandas Remuneradas</strong>? Essa &eacute; uma nova forma de gerar renda online com a ajuda do <strong>Google</strong> &mdash; sem precisar vender produtos, aparecer em v&iacute;deos ou investir pesado em tr&aacute;fego pago.</p>
+        
+        <p>Neste artigo, voc&ecirc; vai entender exatamente o que &eacute; o m&eacute;todo <strong>Mini Demandas Remuneradas</strong>, como ele funciona, quem &eacute; a produtora por tr&aacute;s do projeto e como voc&ecirc; pode come&ccedil;ar do zero e ser <strong>remunerado em d&oacute;lar</strong> todos os meses, simplesmente por ter um blog com an&uacute;ncios do <strong>Google Adsense</strong>.</p>
+        
+        <h2>O que s&atilde;o Mini Demandas Remuneradas?</h2>
+        
+        <p>As <strong>Mini Demandas Remuneradas</strong> s&atilde;o micro temas com alto potencial de busca no Google e pouca concorr&ecirc;ncia, que permitem que qualquer pessoa crie <strong>artigos otimizados</strong> (SEO) e atraia visitantes <strong>gratuitamente</strong> para o seu blog.</p>
+        
+        <p>Com esse tr&aacute;fego org&acirc;nico, o <strong>Google exibe automaticamente an&uacute;ncios</strong> no seu blog por meio do <strong>Google Adsense</strong>, e voc&ecirc; passa a receber <strong>comiss&otilde;es em d&oacute;lar</strong> pelas <strong>exibi&ccedil;&otilde;es</strong> e <strong>cliques</strong> dos visitantes.</p>
+        
+        <p>Esse m&eacute;todo &eacute; ensinado passo a passo por <strong>Juliana Costa</strong>, especialista em marketing digital e respons&aacute;vel por ensinar milhares de pessoas a se tornarem <strong>parceiras do Google</strong>, ganhando em d&oacute;lar de forma 100% legal, segura e validada.</p>
+        
+        <h2>Como funcionam as Mini Demandas Google?</h2>
+        
+        <p>O processo &eacute; simples e pode ser aplicado por qualquer pessoa com acesso &agrave; internet. Veja o passo a passo do m&eacute;todo <strong>Mini Demandas Google</strong>:</p>
+        
+        <ol>
+            <li>
+            <p><strong>Cria&ccedil;&atilde;o do Blog</strong>: Voc&ecirc; aprende a montar um blog profissional, mesmo que nunca tenha feito isso antes.</p>
+            </li>
+            <li>
+            <p><strong>Escolha das Mini Demandas</strong>: Voc&ecirc; vai aprender a identificar temas com alto potencial de busca e baixa concorr&ecirc;ncia.</p>
+            </li>
+            <li>
+            <p><strong>Produ&ccedil;&atilde;o de Conte&uacute;do</strong>: Ser&aacute; ensinado como escrever (ou mandar escrever) artigos que ranqueiam no Google e atraem visitantes reais.</p>
+            </li>
+            <li>
+            <p><strong>Aprova&ccedil;&atilde;o no Google Adsense</strong>: O m&eacute;todo ensina como configurar sua conta do Adsense para ser aprovada e come&ccedil;ar a exibir an&uacute;ncios no blog.</p>
+            </li>
+            <li>
+            <p><strong>Ganhos em D&oacute;lar</strong>: Com visitantes acessando seu blog todos os dias, o Google exibir&aacute; an&uacute;ncios automaticamente e pagar&aacute; <strong>em d&oacute;lar</strong>, mensalmente, por cada clique e exibi&ccedil;&atilde;o.</p>
+            </li>
+            <li>
+            <p><strong>Transfer&ecirc;ncia Internacional</strong>: Voc&ecirc; vai aprender como transferir seus ganhos para sua conta banc&aacute;ria no Brasil, de forma simples e segura.</p>
+            </li>
+        </ol>
+        
+        <h2>Por que esse m&eacute;todo funciona?</h2>
+        
+        <p>O segredo do m&eacute;todo est&aacute; no uso de <strong>Mini Demandas Google</strong> &mdash; pequenos temas que as pessoas buscam no Google todos os dias e que ainda n&atilde;o est&atilde;o saturados de concorr&ecirc;ncia. Isso facilita o <strong>ranqueamento no topo do Google</strong>, gerando tr&aacute;fego gratuito de forma previs&iacute;vel e escal&aacute;vel.</p>
+        
+        <p>Al&eacute;m disso, o <strong>Google Adsense</strong> &eacute; um dos programas mais seguros e confi&aacute;veis do mundo, utilizado por grandes portais e criadores de conte&uacute;do.</p>
+        
+        <hr />
+        <h2>❓ Perguntas Frequentes sobre o M&eacute;todo Mini Demandas Remuneradas</h2>
+        
+        <h3>✅ Mini Demandas Remuneradas &eacute; verdade?</h3>
+        
+        <p>Sim, &eacute; verdade! O m&eacute;todo ensina como se tornar parceiro oficial do Google e ser remunerado em d&oacute;lar pelos an&uacute;ncios exibidos no seu blog. Milhares de pessoas j&aacute; est&atilde;o aplicando e recebendo mensalmente.</p>
+        
+        <h3>🔍 Como fazer Mini Demandas Remuneradas?</h3>
+        
+        <p>Voc&ecirc; s&oacute; precisa seguir o passo a passo do treinamento oficial, onde aprender&aacute; desde a cria&ccedil;&atilde;o do blog at&eacute; a publica&ccedil;&atilde;o dos artigos e a ativa&ccedil;&atilde;o dos an&uacute;ncios do Google.</p>
+        
+        <h3>💸 Mini Demandas Remuneras Google paga mesmo?</h3>
+        
+        <p>Sim. O pagamento &eacute; feito pelo <strong>Google Adsense</strong>, diretamente em d&oacute;lar. O dinheiro pode ser transferido para sua conta banc&aacute;ria no Brasil via transfer&ecirc;ncia internacional.</p>
+        
+        <h3>🧠 Quem &eacute; Juliana Costa, criadora do m&eacute;todo?</h3>
+        
+        <p>Juliana Costa &eacute; empreendedora digital e especialista em SEO. Ela desenvolveu o m&eacute;todo ap&oacute;s conseguir viver exclusivamente da renda gerada com blogs monetizados pelo Adsense.</p>
+        
+        <h3>🧪 Mini Demandas Remuneradas funciona mesmo?</h3>
+        
+        <p>Funciona para quem aplica. O m&eacute;todo n&atilde;o promete dinheiro f&aacute;cil, mas sim uma estrat&eacute;gia inteligente e escal&aacute;vel de construir renda passiva atrav&eacute;s de conte&uacute;do e tr&aacute;fego org&acirc;nico.</p>
+        
+        <h3>⚠️ Mini Demandas Remuneradas &eacute; golpe?</h3>
+        
+        <p>N&atilde;o. O m&eacute;todo &eacute; leg&iacute;timo, com base em estrat&eacute;gias de marketing digital usadas por grandes players do mercado. O programa &eacute; vendido por plataformas oficiais e oferece garantia de satisfa&ccedil;&atilde;o.</p>
+        
+        <h3>📝 Mini Demandas Remuneradas no Reclame Aqui?</h3>
+        
+        <p>At&eacute; o momento, o m&eacute;todo <strong>n&atilde;o possui reclama&ccedil;&otilde;es relevantes no Reclame Aqui</strong>, o que refor&ccedil;a a seriedade do trabalho da produtora Juliana Costa. Sempre verifique a plataforma antes de comprar para garantir que est&aacute; no site oficial.</p>
+        
+        <h3>📱 Preciso aparecer ou vender algo?</h3>
+        
+        <p>N&atilde;o. Voc&ecirc; n&atilde;o precisa aparecer, gravar v&iacute;deos nem vender produtos. A &uacute;nica coisa que voc&ecirc; precisa fazer &eacute; aprender a criar e ranquear artigos &mdash; e o pr&oacute;prio Google se encarrega dos an&uacute;ncios.</p>
+        
+        <hr />
+        <h2>Conclus&atilde;o: Vale a Pena Investir em Mini Demandas Remuneradas?</h2>
+        
+        <p>Se voc&ecirc; busca uma forma de <strong>trabalhar de casa</strong>, construir um <strong>neg&oacute;cio digital real</strong> e ainda ser pago em <strong>d&oacute;lar</strong>, o m&eacute;todo <strong>Mini Demandas Remuneradas</strong> pode ser o caminho ideal.</p>
+        
+        <p>Al&eacute;m de ser seguro, legalizado e baseado em <strong>parceria com o pr&oacute;prio Google</strong>, o m&eacute;todo &eacute; simples o suficiente para qualquer pessoa come&ccedil;ar &mdash; mesmo sem experi&ecirc;ncia.</p>
+        
+        <blockquote>
+        <p>🌟 Comece hoje mesmo a criar seu primeiro blog e transforme mini demandas em grandes resultados financeiros com o Google.</p>
+        </blockquote>
+        
+
+    </article>
+
+    <section class="sessao01 bg-hca-beige min-h-screen">
+        <div class="mx-auto">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-[8.33%]"></div>
+                <div class="w-full md:w-[58.33%] lg:w-[58.33%] xl:w-[33.33%] px-4">
+                    <div>
+                        <div class="text-center">
+                            <div class="max-w-[800px] mx-auto my-5 p-[30px] bg-gradient-to-br from-white to-hca-beige-light/50 rounded-[15px] shadow-lg">
+                                <h1 class="m-0 p-0">
+                                    <img src="images/head1.png" alt="Mini-tarefas que pagam de R$90 a R$330 por dia" class="w-full">
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="border border-hca-beige-light shadow-md shadow-[#5b553c]">
+
+                            <script src="https://cdn.vslplay.com/player.js" defer></script>
+                            <vslplay-player id="ce043deb-5f70-464c-9651-9aa0d6cd9f20"></vslplay-player>
+                            <center>
+
+<p style="font-size: 16px; background-color: #28a745;color: #fff;padding: 7px 0px;"><b>Desconto de R$50,00</b>!</p>
+<div style="padding: 34px 0px;">
+    
+    <p style="color: #28a745; margin: -24px;" > De <del style="color: rgb(136, 31, 31);">R$ 197,00</del> por <b>R$ 147,00</b> à vista.</p>
+                           
+                         <div style="padding: 34px 0px;">
+                           <a href="https://go.perfectpay.com.br/PPU38CPNI62" target="_blank" style="
+  display: inline-block;
+  background-color: #28a745;
+  color: white;s
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  padding: 16px 70px;
+">
+  QUERO COMEÇAR AGORA
+</a>
+
+</div>
+</center>
+
+
+                        </div>
+                        
+                        
+                        <!-- Carrossel de Parceiros -->
+                        <div class="partners-container">
+                            <div class="partners-title m-0">
+                                Parceiros verificados
+                                <img src="images/6711626.png" alt="Verificado" class="verified-icon">
+                            </div>
+                            <!-- Google Partners Badge dentro do container -->
+                            <div class="google-partners-badge" style="margin-top:-10px; margin-bottom:-8px;">
+                                <img src="images/google-partners-2x.png" alt="Google Partners Badge" class="google-badge">
+                            </div>
+                            <div class="logo-carousel" style="margin-top:-5px;">
+                                <div class="logo-slide">
+                                    <div class="logo-wrapper">
+                                        <img src="images/google-logo.png" alt="google-logo" class="partner-logo">
+                                        <img src="images/cif-logo-png_seeklogo-485840.png" alt="cif-logo" class="partner-logo">
+                                        <img src="images/Image_Ala_Brazil_%281998-2024%29.png" alt="ala-logo" class="partner-logo">
+                                        <img src="images/LOGOS-SITE-15.png" alt="wepink-logo" class="partner-logo">
+                                        <img src="images/magalu-logo-0.png" alt="magalu-logo" class="partner-logo">
+                                        <img src="images/amazon-logo-0.png" alt="amazon-logo" class="partner-logo">
+                                    </div>
+                                    <div class="logo-wrapper">
+                                        <!-- Duplicata para criar efeito infinito -->
+                                        <img src="images/google-logo.png" alt="google-logo" class="partner-logo">
+                                        <img src="images/cif-logo-png_seeklogo-485840.png" alt="cif-logo" class="partner-logo">
+                                        <img src="images/Image_Ala_Brazil_%281998-2024%29.png" alt="ala-logo" class="partner-logo">
+                                        <img src="images/LOGOS-SITE-15.png" alt="wepink-logo" class="partner-logo">
+                                        <img src="images/amazon-logo-0.png" alt="amazon-logo" class="partner-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Imagem para mobile após o vídeo -->
+                        <div class="mobile-hero-image mt-5">
+                            <img src="images/mobile.png" alt="Mini Demanadas Remuneradas" title="Mini Demandas Remuneradas" class="w-full rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-[33.33%] lg:w-[33.33%] xl:w-[58.33%]"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="mt-0">
+        <div class="separator">
+            <div class="separator-coin"></div>
+        </div>
+        
+        <!-- Site Seguro - Certificados de Segurança -->
+        <div class="site-seguro-container">
+            <div class="security-badges-container">
+                <div class="security-badge">
+                    <img src="images/1.png" alt="SSL Blindado" title="Mini Demandas Remuneradas" class="security-badge-img">
+                </div>
+                <div class="security-badge"> 
+                    <img src="images/2.png" alt="Site Blindado" title="Mini Demanadas Remuneradas" class="security-badge-img">
+                </div>
+                <div class="security-badge">
+                    <img src="images/3.png" alt="Site Seguro Google" title="Mini Demanadas Remuneradas" class="security-badge-img">
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-gradient-to-b md:from-[#FBF4E4] from-[#f8eab9] to-hca-beige-light text-center text-hca-brown-dark py-6">
+            <div class="container mx-auto px-4">
+                <h6 class="mb-4 text-base">
+                    ©2025 Todos os direitos reservados - Juliana Costa<br>
+                    <div class="mt-2 space-x-2">
+                        <a href="#" class="inline-flex items-center text-hca-brown-dark hover:text-hca-brown hover:underline">
+                            <i data-feather="file-text" class="w-4 h-4 mr-1"></i> Termos de Uso
+                        </a>
+                        <span>|</span>
+                        <a href="#" class="inline-flex items-center text-hca-brown-dark hover:text-hca-brown hover:underline">
+                            <i data-feather="shield" class="w-4 h-4 mr-1"></i> Política de Privacidade
+                        </a>
+                    </div>
+                </h6>
+            </div>
+        </div>
+    </footer>
+
+   
+
+
+
+``` </body></html>
